@@ -9,6 +9,9 @@ class InstagramApiLink extends Model
 {
     use HasFactory;
 
+    //Definition du nom exact de la table
+    protected $table = 'instagram_api_link';
+
     protected $fillable = [
         'url',
         'user_id',

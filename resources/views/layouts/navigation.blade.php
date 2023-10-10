@@ -15,6 +15,10 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('admin.instagram_api_link.index')"
+                                :active="request()->routeIs('admin.instagram_api_link.index')">
+                        {{ __('Lien Instagram') }}
+                    </x-nav-link>
                 </div>
             </div>
 
