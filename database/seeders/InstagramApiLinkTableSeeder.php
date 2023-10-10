@@ -22,6 +22,7 @@ class InstagramApiLinkTableSeeder extends Seeder
                 'endpoint' => 'media',
                 'fields' => json_encode(['id', 'username', 'caption', 'media_type', 'media_url', 'thumbnail_url', 'permalink', 'timestamp']),
                 'access_token' => 'IGQWRORENKbmtpWWlBS1U0M1BJSzVKUHM3RFVrOXNRYzFXU2dxSmRwaXdyZAGRWMFFrYWtudkM0UXhuSlgxOEtickU3R2lwbHVJbGFBclVrOTRqamFtQ0lGRXhERXVsa1ZAHdld2eV8wdjBkUQZDZD',
+                'limit' => 6,
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);

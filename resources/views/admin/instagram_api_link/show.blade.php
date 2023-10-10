@@ -25,23 +25,22 @@
                         <li><strong>Endpoint :</strong> {{ $instagramApiLink->endpoint }}</li>
                         <li><strong>Fields :</strong> {{ $instagramApiLink->fields }}</li>
                         <li><strong>Access Token :</strong> {{ $instagramApiLink->access_token }}</li>
+                        <li><strong>Nombre de publications :</strong> {{ $instagramApiLink->limit }}</li>
                         <li><strong>Créé le :</strong> {{ $instagramApiLink->created_at->format('d/m/Y H:i:s') }}</li>
                         <li><strong>Mis à jour le :</strong> {{ $instagramApiLink->updated_at->format('d/m/Y H:i:s') }}
                         </li>
                     </ul>
                     <p><strong>Le lien final est :</strong></p>
                     <p>
-                        {{ $instagramApiLink->url }}/{{ $instagramApiLink->user_id }}/{{ $instagramApiLink->endpoint }}
-                        ?fields={{ implode(', ', json_decode($instagramApiLink->fields)) }}
-                        &access_token={{ $instagramApiLink->access_token }}
+                        {{ $instagramApiLink->url }}/{{ $instagramApiLink->user_id }}/{{ $instagramApiLink->endpoint }}?fields={{ implode(', ', json_decode($instagramApiLink->fields)) }}&access_token={{ $instagramApiLink->access_token }}&&limit={{ $instagramApiLink->limit }}&sort=timestamp
                     </p>
 
                     <hr class="p-3 mt-4">
 
-                        <a href="{{route('admin.instagram_api_link.edit',['instagramApiLink'=>$instagramApiLink])}}"
-                           class="btn btn-primary text-white font-bold py-2 px-4 rounded">
-                            Modifier le lien
-                        </a>
+                    <a href="{{route('admin.instagram_api_link.edit',['instagramApiLink'=>$instagramApiLink])}}"
+                       class="btn btn-primary text-white font-bold py-2 px-4 rounded">
+                        Modifier le lien
+                    </a>
                 </div>
             </div>
         </div>

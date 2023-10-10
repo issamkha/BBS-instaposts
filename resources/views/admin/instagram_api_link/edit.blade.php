@@ -1,4 +1,3 @@
-<!-- resources/views/admin/instagram_api_link/edit.blade.php -->
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -93,12 +92,18 @@
                             </div>
                         </div>
 
-
                         <!-- Champ Access Token -->
                         <div class="mb-4">
                             <label for="access_token" class="block text-gray-600">Access Token :</label>
                             <input type="text" name="access_token" id="access_token" class="form-input w-full"
                                    value="{{ $instagramApiLink->access_token }}" required>
+                        </div>
+
+                        <!-- Champ Limit -->
+                        <div class="mb-4">
+                            <label for="limit" class="block text-gray-600">Nombre de publications :</label>
+                            <input type="number" name="limit" id="limit" class="form-input w-full"
+                                   value="{{ $instagramApiLink->limit }}" required>
                         </div>
 
                         <!-- Bouton de mise à jour -->

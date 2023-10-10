@@ -79,6 +79,11 @@
                             <input type="text" name="access_token" id="access_token" class="form-input w-full"
                                    required>
                         </div>
+                        <div class="mb-4">
+                            <label for="limit" class="block text-gray-600">Nombre de publications :</label>
+                            <input type="number" name="limit" id="limit" class="form-input w-full"
+                                   value="6" required>
+                        </div>
 
                         <div class="mt-4">
                             <button type="submit" class="btn btn-primary text-white font-bold py-2 px-4 rounded">

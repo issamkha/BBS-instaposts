@@ -17,6 +17,7 @@ class InstagramApiLink extends Model
         'user_id',
         'endpoint',
         'fields',
-        'access_token'
+        'access_token',
+        'limit'
     ];
 }

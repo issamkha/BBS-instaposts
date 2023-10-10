@@ -41,6 +41,7 @@ class InstagramApiLinkController extends Controller
             'user_id' => 'required|string',
             'fields' => 'required|array',
             'access_token' => 'required|string|max:500',
+            'limit' => 'required|integer',
         ]);
 
         try {
@@ -54,6 +55,7 @@ class InstagramApiLinkController extends Controller
                 'user_id' => $validatedData['user_id'],
                 'fields' => $fieldsJson,
                 'access_token' => $validatedData['access_token'],
+                'limit' => $validatedData['limit'],
             ]);
 
             // Rediriger vers la liste des liens avec un message de succès
@@ -94,6 +96,7 @@ class InstagramApiLinkController extends Controller
             'user_id' => 'required|string',
             'fields' => 'required|array',
             'access_token' => 'required|string|max:500',
+            'limit' => 'required|integer',
         ]);
 
         try {
@@ -107,6 +110,7 @@ class InstagramApiLinkController extends Controller
                 'user_id' => $validatedData['user_id'],
                 'fields' => $fieldsJson,
                 'access_token' => $validatedData['access_token'],
+                'limit' => $validatedData['limit'],
             ]);
 
             // Rediriger vers la liste des liens avec un message de succès

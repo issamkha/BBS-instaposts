@@ -18,6 +18,7 @@ return new class extends Migration {
                 $table->string('endpoint');
                 $table->json('fields');
                 $table->string('access_token', 500);
+                $table->integer('limit');
                 $table->timestamps();
             });
         }
