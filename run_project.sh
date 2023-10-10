@@ -12,6 +12,18 @@ if ! command -v node &> /dev/null; then
     exit 1
 fi
 
+# Initialiser le projet
+composer install
+
+# Vérification de l'initialisation du projet
+if [ $? -eq 0 ]; then
+    echo "Projet initialisé avec succès."
+else
+    echo "Erreur lors de l'initialisation du projet."
+    exit 1
+fi
+
+
 # Crée la base de données
 php artisan db:create
 
