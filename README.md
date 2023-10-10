@@ -1,66 +1,71 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Projet de Test Laravel - BBS-instaposts
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Ce projet a été créé à la demande de BBS dans le but de tester mes compétences en développement avec le framework
+Laravel, en tirant parti de mes connaissances générales en PHP. Il sert de terrain d'expérimentation pour la mise en
+œuvre de diverses fonctionnalités, démontrant ainsi mon savoir-faire en développement web avec Laravel.
 
-## About Laravel
+## Commandes pour lancer le projet
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Avant de commencer, assurez-vous d'utiliser PHP version 8.2.
+- Pour lancer le projet, exécutez le script personnalisé `./run_project.sh`.
+- Démarrez le serveur PHP en utilisant la commande : `php artisan serve`.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+    - L'utilisateur test est : 'john@example.com'.
+    - Le mot de passe est :'password'.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Étapes de création du projet
 
-## Learning Laravel
+### 0. Récupération du lien API Instagram depuis META
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- J'ai sollicité l'API Graph pour Instagram afin d'obtenir les informations nécessaires à la récupération des données de
+  mon compte Instagram. J'ai généré un jeton de longue durée pour mener le test à bien.
+- Le compte Instagram de test est un compte personnel sans grande importance.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 1. Initialisation du projet & création de la base de données
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- J'ai initialisé le projet Laravel avec PHP 8.2.
+- J'ai créé une commande personnalisée pour la création de la base de données : `app/console/commande/DbCreate.php`.
+- J'ai utilisé la commande Artisan pour créer la base de données : `php artisan db:create`.
 
-## Laravel Sponsors
+### 2. Installation de Breeze pour l'authentification
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- J'ai installé le package Breeze, un outil pratique pour gérer l'authentification dans
+  Laravel : `composer require laravel/breeze --dev`.
 
-### Premium Partners
+### 3. Mise en place d'un utilisateur de test
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+- J'ai utilisé la commande Artisan pour exécuter le seeder précédemment créé et insérer un utilisateur de
+  test : `php artisan db:seed --class=UsersTableSeeder`.
 
-## Contributing
+### 4. Traduction des textes en français et en anglais
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- J'ai configuré les fichiers de traduction pour prendre en charge les langues française et anglaise.
 
-## Code of Conduct
+### 5. Création de la table et du modèle pour le lien Instagram
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- J'ai créé une table et un modèle pour stocker le lien vers le compte Instagram que je souhaite suivre.
 
-## Security Vulnerabilities
+### 6. Création du contrôleur pour la gestion du/des lien(s) Instagram
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- J'ai développé un contrôleur avec les opérations CRUD (Create, Read, Update, Delete) pour gérer les liens Instagram.
+- J'ai défini les routes correspondantes dans un fichier de routes personnalisé.
 
-## License
+### 7. Création de la table et du modèle pour les publications Instagram
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- J'ai créé une table et un modèle pour stocker les publications Instagram.
+
+### 8. Création du fichier de synchronisation des publications depuis l'API Instagram
+
+- J'ai créé un fichier de commande personnalisée pour synchroniser les publications Instagram à partir de
+  l'API : `app/console/commande/SyncInstagramPosts.php`.
+- J'ai utilisé la commande Artisan pour automatiser cette tâche : `php artisan app:sync-instagram-posts`. Il faudra
+  définir une tâche cron sur le serveur pour exécuter la commande Laravel `schedule:run`.
+
+### 9. Ajout d'un lien de test
+
+- J'ai utilisé la commande Artisan pour exécuter le seeder précédemment créé et insérer un lien de
+  test : `php artisan db:seed --class=InstagramApiLinkTableSeeder`.
+
+Ce projet m'a permis de consolider mes compétences de base en développement Laravel et de mettre en pratique divers
+aspects de ce framework. J'ai également utilisé ce projet comme terrain d'apprentissage pour de nouvelles
+fonctionnalités de Laravel et pour explorer de nouvelles possibilités de développement web.
