@@ -43,9 +43,9 @@ class SyncInstagramPosts extends Command
             $fieldsArray = json_decode($instaLink->fields, true);
 
             // Utiliser implode pour concaténer les éléments du tableau avec une virgule
-            $fieldsString = implode(', ', $fieldsArray);
-            $url = $instaLink->url . $instaLink->user_id . '/' . $instaLink->endpoint . '?fields=' . $fieldsString . '&access_token=' . $instaLink->access_token;
-
+            $fieldsString = implode(',', $fieldsArray);
+            $url = $instaLink->url . '/' . $instaLink->user_id . '/' . $instaLink->endpoint . '?fields=' . $fieldsString . '&access_token=' . $instaLink->access_token;
+dump($url);
             // Effectuer la requête HTTP
             $response = Http::get($url);
 

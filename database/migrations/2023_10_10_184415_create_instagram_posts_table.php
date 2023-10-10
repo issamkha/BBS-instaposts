@@ -10,17 +10,19 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('instagram_posts', function (Blueprint $table) {
-            $table->id();
-            $table->string('username');
-            $table->text('caption');
-            $table->string('media_type');
-            $table->text('media_url');
-            $table->text('thumbnail_url')->nullable()->default(null);
-            $table->string('permalink');
-            $table->dateTimeTz('timestamp');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('instagram_posts')) {
+            Schema::create('instagram_posts', function (Blueprint $table) {
+                $table->id();
+                $table->string('username');
+                $table->text('caption');
+                $table->string('media_type');
+                $table->text('media_url');
+                $table->text('thumbnail_url')->nullable()->default(null);
+                $table->string('permalink');
+                $table->dateTimeTz('timestamp');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

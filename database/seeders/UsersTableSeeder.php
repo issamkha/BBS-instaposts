@@ -14,10 +14,17 @@ class UsersTableSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('users')->insert([
-            'name' => 'John Doe',
-            'email' => 'john@example.com',
-            'password' => Hash::make('password'),
-        ]);
+        // Vérifiez si la table "users" est vide
+        if (DB::table('users')->count() === 0) {
+            // Si la table est vide, insérez des données
+            DB::table('users')->insert([
+                'name' => 'John Doe',
+                'email' => 'john@example.com',
+                'password' => Hash::make('password'),
+            ]);
+        } else {
+            // Si des enregistrements existent déjà, ne rien faire
+            echo "La table 'users' contient déjà des enregistrements. Aucune donnée n'a été insérée.\n";
+        }
     }
 }

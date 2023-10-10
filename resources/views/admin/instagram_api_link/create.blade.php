@@ -29,13 +29,11 @@
                         <div class="mb-4">
                             <label for="endpoint" class="block text-gray-600">Endpoint :</label>
                             <input type="text" name="endpoint" id="endpoint" class="form-input w-full"
-                                   value="media"
                                    required>
                         </div>
                         <div class="mb-4">
                             <label for="user_id" class="block text-gray-600">User Id :</label>
                             <input type="text" name="user_id" id="user_id" class="form-input w-full"
-                                   value="7132908793420378"
                                    required>
                         </div>
                         <div class="mb-4">
@@ -79,7 +77,6 @@
                         <div class="mb-4">
                             <label for="access_token" class="block text-gray-600">Access Token :</label>
                             <input type="text" name="access_token" id="access_token" class="form-input w-full"
-                                   value="IGQWRORENKbmtpWWlBS1U0M1BJSzVKUHM3RFVrOXNRYzFXU2dxSmRwaXdyZAGRWMFFrYWtudkM0UXhuSlgxOEtickU3R2lwbHVJbGFBclVrOTRqamFtQ0lGRXhERXVsa1ZAHdld2eV8wdjBkUQZDZD"
                                    required>
                         </div>
 
