@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Env;
 use Illuminate\Support\Facades\DB;
 
 class InstagramApiLinkTableSeeder extends Seeder
@@ -21,7 +22,7 @@ class InstagramApiLinkTableSeeder extends Seeder
                 'user_id' => '7132908793420378',
                 'endpoint' => 'media',
                 'fields' => json_encode(['id', 'username', 'caption', 'media_type', 'media_url', 'thumbnail_url', 'permalink', 'timestamp']),
-                'access_token' => 'IGQWRQOERTbjc0a21paTdieVMtODRMY2w0ZA0ZACRlF6ak9MSjNsTVQwOHRfZA1NPaHZAueG5yZA0Fta1NPRTBuWWNHZAXRlLU1GMmtsY3Y2S3hYWTRQMUhZAc3dFbDNQNXhWZAjVKdjY4eE9ua1BFQQZDZD',
+                'access_token' => Env::get('INSTAGRAM_ACCESS_TOKEN_TEST'),
                 'limit' => 6,
                 'created_at' => now(),
                 'updated_at' => now(),
