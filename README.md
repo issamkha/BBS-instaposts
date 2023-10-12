@@ -7,7 +7,8 @@ Laravel, en tirant parti de mes connaissances générales en PHP. Il sert de ter
 ## Commandes pour lancer le projet
 
 - Avant de commencer, assurez-vous d'utiliser PHP version 8.2.
-- Modifier le .env pour correspondre avec votre serveur
+- Modifier le .env pour correspondre avec votre serveur 
+- ####Inserer le Jeton d'accès Instagram test dans le .env que vous avez reçu par mail
 - Puis, pour lancer le projet, exécutez le script personnalisé `./run_project.sh`.
 - Démarrez le serveur PHP en utilisant la commande : `php artisan serve`.
 
